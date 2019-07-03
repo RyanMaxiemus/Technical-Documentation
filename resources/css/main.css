@@ -1,25 +1,25 @@
 code {
-    background-color: #D3D3D3;
-  }
-  .code-example {
-    background: #ffffff;
-    overflow: auto;
-    width: auto;
-    border: solid gray;
-    border-width: .1em .1em .1em .8em;
-    padding: .2em .6em;
-  }
-  .code-example pre {
-    line-height: 125%;
-  }
-  .code-example span {
-    color: #007700;
-  }
-  .section-list-item {
-    margin: 20px;
-  }
-  .live-sample-frame {
-    border: solid black;
-    border-width: thin thin thin thick;
-    padding: 20px;
-  }
+  background-color: #e7e7e7;
+}
+.code-example {
+  background: #e7e7e7;
+  overflow: auto;
+  width: auto;
+  border: solid gray;
+  border-width: 0.1em 0.1em 0.1em 0.8em;
+  padding: 0.2em 0.6em;
+}
+.code-example pre {
+  line-height: 125%;
+}
+span {
+  color: #007700;
+}
+.section-list-item {
+  margin: 20px;
+}
+.live-sample-frame {
+  border: solid black;
+  border-width: thin thin thin thick;
+  padding: 20px;
+}
