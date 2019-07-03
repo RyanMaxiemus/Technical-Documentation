@@ -1,8 +1,9 @@
 code {
   background-color: #e7e7e7;
+  font-family: 'Courier New', Courier, monospace;
 }
 .code-example {
-  background: #e7e7e7;
+  background-color: #e7e7e7;
   overflow: auto;
   width: auto;
   border: solid gray;
@@ -11,6 +12,7 @@ code {
 }
 .code-example pre {
   line-height: 125%;
+  font-family: 'Courier New', Courier, monospace;
 }
 span {
   color: #007700;
