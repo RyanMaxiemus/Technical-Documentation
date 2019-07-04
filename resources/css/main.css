@@ -1,6 +1,13 @@
+nav li {
+  list-style: none;
+  margin: 25px;
+}
+.nav-link {
+  text-decoration: none;
+}
 code {
   background-color: #e7e7e7;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 .code-example {
   background-color: #e7e7e7;
@@ -12,10 +19,14 @@ code {
 }
 .code-example pre {
   line-height: 125%;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 span {
   color: #007700;
+}
+.section-img {
+  width: 90vw;
+  max-width: 820px;
 }
 .section-list-item {
   margin: 20px;
@@ -24,4 +35,43 @@ span {
   border: solid black;
   border-width: thin thin thin thick;
   padding: 20px;
+}
+/* Larger Screens */
+@media only screen and (min-width: 1200px) {
+  /* Navigation Bar Styles */
+  #navbar {
+    height: 100%;
+    width: 25vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    padding-top: 20px;
+    border-right: 2px solid;
+  }
+  #navbar header {
+    text-align: center;
+    border-bottom: 4px solid;
+  }
+  #navbar div {
+    overflow: auto;
+  } /* End of Navigation Bar Styles */
+  main {
+    margin-left: 25vw;
+  }
+}
+/* Smaller Screens */
+@media only screen and (max-width: 1200px) {
+  #navbar {
+    text-align: center;
+  }
+  #navbar header {
+    border-style: none none solid;
+  }
+  #navbar div {
+    overflow: auto;
+    height: 250px;
+    border: 2px solid;
+  }
 }

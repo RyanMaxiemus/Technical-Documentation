@@ -25,38 +25,49 @@
       <header>
         <h1>HTML - Structuring The Web</h1>
       </header>
-      <ul>
+      <div>
         <li>
           <a href="#Introduction" class="nav-link">Introduction</a>
         </li>
+        <hr>
         <li>
           <a href="#Anatomy_of_an_HTML_Element" class="nav-link"
             >Anatomy of an HTML Element</a
           >
         </li>
+        <hr>
         <li>
           <a href="#Nesting_Elements" class="nav-link">Nesting Elements</a>
         </li>
+        <hr>
         <li>
           <a href="#Block_Versus_Inline_Elements" class="nav-link"
             >Block Versus Inline Elements</a
           >
         </li>
+        <hr>
         <li>
           <a href="#Empty_Elements" class="nav-link">Empty Elements</a>
         </li>
+        <hr>
         <li>
           <a href="#Attributes" class="nav-link">Attributes</a>
         </li>
+        <hr>
         <li>
           <a href="#Adding_Attributes_to_an_Element" class="nav-link"
             >Adding Attributes to an Element</a
           >
         </li>
+        <hr>
         <li>
           <a href="#Boolean_Attributes" class="nav-link">Boolean Attributes</a>
         </li>
-      </ul>
+        <hr>
+        <li>
+          <a href="#Omitting_Quotes_Around_Attribute_Values" class="nav-link">Omitting Quotes Around Attribute Values</a>
+        </li>
+      </div>
     </nav>
     <main id="main-doc">
       <section class="main-section" id="Introduction">
@@ -478,6 +489,131 @@
           </p>
           <input type="text" disabled />
           <input type="text" />
+        </article>
+      </section>
+      <section class="main-section" id="Omitting_Quotes_Around_Attribute_Values">
+        <header>
+          <h1>Omitting Quotes Around Attribute Values</h1>
+        </header>
+        <article>
+          <p>
+            When you look around the World Wide Web, you'll come across a number of strange markup styles, including attribute values without quotes. This is allowable in certain circumstances, but will break your markup in others. For example, if we revisit our link example from earlier, we could write a basic version with only the <code>href</code> attribute, like this:
+          </p>
+          <!-- Code Example -->
+          <div class="code-example">
+            <table>
+              <tr>
+                <td>
+                  <pre>1</pre>
+                </td>
+                <td>
+                  <pre>  <span>&lt;a href=</span>https://www.mozilla.org<span>/&gt;</span>favorite website<span>&lt;/a&gt;</span></pre>
+                </td>
+              </tr>
+            </table>
+          </div> <!-- End of Code Example -->
+          <p>
+            However, as soon as we add the <code>title</code> attribute in this style, things will go wrong:
+          </p>
+          <!-- Code Example -->
+          <div class="code-example">
+            <table>
+              <tr>
+                <td>
+                  <pre>1</pre>
+                </td>
+                <td>
+                  <pre>  <span>&lt;a href=</span>https://www.mozilla.org <span>title=</span>The Mozilla homepage<span>/&gt;</span>favorite website<span>&lt;/a&gt;</span></pre>
+                </td>
+              </tr>
+            </table>
+          </div> <!-- End of Code Example -->
+          <p>
+            At this point the browser will misinterpret your markup, thinking that the <code>title</code> attribute is actually three attributes — a title attribute with the value "The", and two boolean attributes, <code>Mozilla</code> and <code>homepage</code>. This is obviously not what was intended, and will cause errors or unexpected behavior in the code, as seen in the live example below. Try hovering over the link to see what the title text is!
+          </p>
+          <a href=https://www.mozilla.org/>favorite website</a>
+          <a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a>
+          <p>
+            Our advice is to always include the attribute quotes — it avoids such problems, and results in more readable code too.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Single_or_Double_Quotes">
+        <header>
+          <h1>Single or Double Quotes?</h1>
+        </header>
+        <article>
+          <p>
+            In this article you'll notice that the attributes are all wrapped in double quotes. You might however see single quotes in some people's HTML. This is purely a matter of style, and you can feel free to choose which one you prefer. Both the following lines are equivalent:
+          </p>
+          <!-- Code Example -->
+          <div class="code-example">
+            <table>
+              <tr>
+                <td>
+                  <pre>1
+2
+3</pre>
+                </td>
+                <td>
+                  <pre>  <span>&lt;a href=</span>"http://www.example.com"<span>&gt;</span>A link to my example.<span>&lt;/a&gt;</span>
+
+  <span>&lt;a href=</span>'http://www.example.com'<span>&gt;</span>A link to my example.<span>&lt;/a&gt;</span></pre>
+                </td>
+              </tr>
+            </table>
+          </div> <!-- End of Code Example -->
+          <p>
+            You should however make sure you don't mix them together. The following will go wrong!
+          </p>
+          <!-- Code Example -->
+          <div class="code-example">
+            <table>
+              <tr>
+                <td>
+                  <pre>1</pre>
+                </td>
+                <td>
+                  <pre>  <span>&lt;a href=</span>"http://www.example.com'<span>&gt;</span>A link to my example.<span>&lt;/a&gt;</span></pre>
+                </td>
+              </tr>
+            </table>
+          </div> <!-- End of Code Example -->
+          <p>
+            If you've used one type of quote in your HTML, you can include the other type of quote inside your attribute values without causing any problems:
+          </p>
+          <!-- Code Example -->
+          <div class="code-example">
+            <table>
+              <tr>
+                <td>
+                  <pre>1</pre>
+                </td>
+                <td>
+                  <pre>  <span>&lt;a href=</span>"http://www.example.com' <span>title=</span>"Isn't this fun?"<span>&gt;</span>A link to my example.<span>&lt;/a&gt;</span></pre>
+                </td>
+              </tr>
+            </table>
+          </div> <!-- End of Code Example -->
+          <p>
+            However if you want to include a quote within the quotes where both the quotes are of the same type (single quote or double quote), you'll have to use HTML entities for the quotes. For example, this will break:
+          </p>
+          <!-- Code Example -->
+          <div class="code-example">
+            <table>
+              <tr>
+                <td>
+                  <pre>1</pre>
+                </td>
+                <td>
+                  <pre>  <span>&lt;a href=</span>'http://www.example.com' <span>title=</span>'Isn't this fun?'<span>&gt;</span>A link to my example.<span>&lt;/a&gt;</span></pre>
+                </td>
+              </tr>
+            </table>
+          </div> <!-- End of Code Example -->
+          <p>
+            So you need to do this:
+          </p>
         </article>
       </section>
     </main>
