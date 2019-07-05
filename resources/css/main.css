@@ -41,7 +41,7 @@ span {
   /* Navigation Bar Styles */
   #navbar {
     height: 100%;
-    width: 25vw;
+    width: 325px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -58,7 +58,7 @@ span {
     overflow: auto;
   } /* End of Navigation Bar Styles */
   main {
-    margin-left: 25vw;
+    margin-left: 325px;
   }
 }
 /* Smaller Screens */
