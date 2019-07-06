@@ -67,6 +67,30 @@
         <li>
           <a href="#Omitting_Quotes_Around_Attribute_Values" class="nav-link">Omitting Quotes Around Attribute Values</a>
         </li>
+        <hr>
+        <li>
+          <a href="#Single_or_Double_Quotes?" class="nav-link">Single or Double Quotes?</a>
+        </li>
+        <hr>
+        <li>
+          <a href="#Anatomy_of_an_HTML_Document" class="nav-link">Anatomy of an HTML Document</a>
+        </li>
+        <hr>
+        <li>
+          <a href="#Whitespace_In_HTML" class="nav-link">Whitespace In HTML</a>
+        </li>
+        <hr>
+        <li>
+          <a href="#HTML_Comments" class="nav-link">HTML Comments</a>
+        </li>
+        <hr>
+        <li>
+          <a href="#Summary" class="nav-link">Summary</a>
+        </li>
+        <hr>
+        <li>
+          <a href="#Reference" class="nav-link">Reference</a>
+        </li>
       </div>
     </nav>
     <main id="main-doc">
@@ -538,7 +562,7 @@
           </p>
         </article>
       </section>
-      <section class="main-section" id="Single_or_Double_Quotes">
+      <section class="main-section" id="Single_or_Double_Quotes?">
         <header>
           <h1>Single or Double Quotes?</h1>
         </header>
@@ -727,9 +751,9 @@
                 </td>
                 <td>
                   <pre> <span>&lt;p&gt;</span>Dogs are silly.<span>&lt;/p&gt;
-    
-     &lt;p&gt;</span>Dogs        are
-              silly.<span>&lt;/p&gt;</span></pre>
+
+ &lt;p&gt;</span>Dogs        are
+        silly.<span>&lt;/p&gt;</span></pre>
                 </td>
               </tr>
             </table>
@@ -739,64 +763,62 @@
           </p>
         </article>
       </section>
-      <section class="main-section" id="Entity_References_Including_Special_Characters_In_HTML">
+      <section class="main-section" id="HTML_Comments">
         <header>
-          <h1>Entity References: Including Special Characters In HTML</h1>
+          <h1>HTML Comments</h1>
         </header>
         <article>
           <p>
-            In HTML, the characters <code>&lt;</code>, <code>&gt;</code>,<code>"</code>,<code>'</code> and & are special characters. They are parts of the HTML syntax itself, so how do you include one of these characters in your text, for example if you really want to use an ampersand or less-than sign, and not have it interpreted as code as some browsers may do? We have to use character references — special codes that represent characters, and can be used in these exact circumstances. Each character reference is started with an ampersand (&), and ended by a semicolon (;).
+            In HTML, as with most programming languages, there is a mechanism available to write comments in the code — comments are ignored by the browser and invisible to the user, and their purpose is to allow you to include comments in the code to say how your code works, what the different parts of the code do, etc. This can be very useful if you return to a code base that you've not worked on for six months, and can't remember what you did — or if you hand your code over to someone else to work on.
           </p>
-          <table>
-            <tr>
-              <th>
-                Literal Character
-              </th>
-              <th>
-                Character Reference Equivalent
-              </th>
-            </tr>
-            <tr>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-            </tr>
-          </table>
+          <p>
+            To turn a section of content inside your HTML file into a comment, you need to wrap it in the special markers <code>&lt;!--</code> and <code>--&gt;</code>, for example:
+          </p>
+          <!-- Code Example -->
+          <div class="code-example">
+            <table>
+              <tr>
+                <td>
+                  <pre>1
+2
+3</pre>
+                </td>
+                <td>
+                  <pre> <span>&lt;p&gt;</span>I'm not inside a comment<span>&lt;/p&gt;</span>
+
+ &lt;!-- &lt;p&gt;I am!&lt;/p&gt; --&gt;</pre>
+                </td>
+              </tr>
+            </table>
+          </div> <!-- End of Code Example -->
+          <p>
+            As you can see below, the first paragraph appears in the live output, but the second one doesn't.
+          </p>
+          <p>I'm not inside a comment</p>
+          
+          <!-- <p>I am!</p> -->
+        </article>
+      </section>
+      <section class="main-section" id="Summary">
+        <header>
+          <h1>Summary</h1>
+        </header>
+        <article>
+          <p>
+            You've reached the end of the article — we hope you enjoyed your tour of the very basics of HTML! At this point you should understand what the language looks like, how it works at a basic level, and be able to write a few elements and attributes. This is a perfect place to be right now, as in subsequent articles in the module we will go into some of the things you have already looked at in a lot more detail, and introduce some new features of the language. Stay tuned!
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>
+          <h1>Reference</h1>
+        </header>
+        <article>
+          <ul>
+            <li>
+              All the documentation on this page was taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">MDN</a>
+            </li>
+          </ul>
         </article>
       </section>
     </main>
