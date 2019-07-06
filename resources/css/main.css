@@ -41,7 +41,7 @@ span {
   /* Navigation Bar Styles */
   #navbar {
     height: 100%;
-    width: 325px;
+    width: 335px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -53,16 +53,21 @@ span {
   #navbar header {
     text-align: center;
     border-bottom: 4px solid;
+    height: 60px;
   }
-  #navbar div {
-    overflow: auto;
+  #navbar li {
+    height: 22px;
+    margin: 15px 0;
   } /* End of Navigation Bar Styles */
   main {
-    margin-left: 325px;
+    margin-left: 345px;
   }
 }
 /* Smaller Screens */
 @media only screen and (max-width: 1200px) {
+  body {
+    margin: 0px;
+  }
   #navbar {
     text-align: center;
   }
@@ -73,5 +78,8 @@ span {
     overflow: auto;
     height: 250px;
     border: 2px solid;
+  }
+  main {
+    margin: 0 25px;
   }
 }
